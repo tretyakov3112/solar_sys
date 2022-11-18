@@ -54,14 +54,15 @@ def parse_star_parameters(line, star):
     **star** — объект звезды.
     """
 
-    parametrs=line.split()
-    R=int(parametrs[1])
-    color=parametrs[2]
-    m=int(parametrs[3])
-    x,y=int(parametrs[4]),int(parametrs[5])
-    Vx,Vy=int(parametrs[6]),int(parametrs[7])
-    dict = {"radius" : R, 'color':color, "mass":m,"coordinats": (x, y),"Velocity": (Vx,Vy)}
-    return dict
+    parametrs = line.split()
+    star.R = float(parametrs[1])
+    star.color = parametrs[2]
+    star.m = float(parametrs[3])
+    star.x = float(parametrs[4])
+    star.y = float(parametrs[5])
+    star.Vx = float(parametrs[6])
+    star.Vy = float(parametrs[7])
+
 
 
 def parse_planet_parameters(line, planet):
@@ -83,14 +84,14 @@ def parse_planet_parameters(line, planet):
 
     **planet** — объект планеты.
     """
-    parametrs=line.split()
-    R=int(parametrs[1])
-    color=parametrs[2]
-    m=int(parametrs[3])
-    x,y=int(parametrs[4]),int(parametrs[5])
-    Vx,Vy=int(parametrs[6]),int(parametrs[7])
-    dict = {"radius" : R, 'color':color, "mass":m,"coordinats": (x, y),"Velocity": (Vx,Vy)}
-    return dict
+    parametrs = line.split()
+    planet.R = float(parametrs[1])
+    planet.color = parametrs[2]
+    planet.m = float(parametrs[3])
+    planet.x = float(parametrs[4])
+    planet.y = float(parametrs[5])
+    planet.Vx = float(parametrs[6])
+    planet.Vy = float(parametrs[7])
 
 def write_space_objects_data_to_file(output_filename, space_objects):
     """Сохраняет данные о космических объектах в файл.

@@ -85,4 +85,4 @@ class DrawableObject:
         self.obj = obj
 
     def draw(self, surface):
-        pg.draw(self.obj, surface)
+        self.obj.draw(surface)
