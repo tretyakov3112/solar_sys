@@ -146,6 +146,7 @@ def main():
     last_time = time.perf_counter()
     drawer = Drawer(screen)
     menu, box, timer = init_ui(screen)
+    'here'
     perform_execution = True
 
     while alive:
@@ -158,7 +159,7 @@ def main():
 
         last_time = cur_time
         drawer.update(space_objects, box)
-        time.sleep(1.0 / 60)
+        time.sleep(1.0 / 1)
 
     print('Modelling finished!')
 
