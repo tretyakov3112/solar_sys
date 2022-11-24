@@ -5,7 +5,7 @@ import pygame as pg
 from solar_vis import *
 from solar_model import *
 from solar_input import *
-from solar_objects import *
+from solar_objects import Star, Planet
 import thorpy
 import time
 import numpy as np
@@ -116,7 +116,7 @@ def init_ui(screen):
     for element in menu.get_population():
         element.surface = screen
 
-    box.set_topleft((0,0))
+    box.set_topleft((window_width//2, 0))
     box.blit()
     box.update()
     return menu, box, timer
@@ -146,7 +146,6 @@ def main():
     last_time = time.perf_counter()
     drawer = Drawer(screen)
     menu, box, timer = init_ui(screen)
-    'here'
     perform_execution = True
 
     while alive:
@@ -159,7 +158,7 @@ def main():
 
         last_time = cur_time
         drawer.update(space_objects, box)
-        time.sleep(1.0 / 1)
+        time.sleep(1.0 / 60)
 
     print('Modelling finished!')
 
