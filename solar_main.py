@@ -116,7 +116,7 @@ def init_ui(screen):
     for element in menu.get_population():
         element.surface = screen
 
-    box.set_topleft((window_width//2, 0))
+    box.set_topleft((0, 0))
     box.blit()
     box.update()
     return menu, box, timer
